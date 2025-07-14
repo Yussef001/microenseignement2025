@@ -1,0 +1,148 @@
+/* --- BASE GÉNÉRALE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- FORMULAIRE --- */
+form {
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+fieldset {
+    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid transparent;
+    padding: 40px 20px 20px 20px; 
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+fieldset:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 30px rgba(0, 102, 204, 0.2);
+    border-image: linear-gradient(90deg, #00c6ff, #0072ff) 1;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #004080;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* --- BOUTON --- */
+button {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0052cc, #00aaff);
+    transform: scale(1.05);
+}
+
+/* --- RÉSULTAT --- */
+.result-box {
+    background: linear-gradient(145deg, #ffffff, #f0faff);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 102, 204, 0.15);
+    animation: zoomIn 0.7s ease-out;
+    border: 3px solid #cce6ff;
+}
+
+.score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0072ff;
+    margin: 15px 0;
+}
+
+.result-box button {
+    margin-top: 20px;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.progress-container {
+    width: 100%;
+    max-width: 300px;
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    margin: 15px auto;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Couleurs dynamiques */
+.bar-green {
+    background: linear-gradient(90deg, #4caf50, #81c784); /* vert */
+    color: white;
+}
+
+.bar-orange {
+    background: linear-gradient(90deg, #ff9800, #ffb74d); /* orange */
+    color: black;
+}
+
+.bar-red {
+    background: linear-gradient(90deg, #e53935, #ef5350); /* rouge */
+    color: white;
+}
+
+/* Texte centré dans la barre */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    transition: width 1s ease-in-out;
+    border-radius: 10px;
+}
